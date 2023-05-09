@@ -1,8 +1,8 @@
 import { useReducer } from "react";
-import reducer from "./Reducer/reducer";
+import reducer, { initialState } from "./Reducer/reducer";
 
 function App() {
-  const [state, dispatch] = useReducer(reducer);
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
     <section className="flex justify-center items-center h-[100vh]">
@@ -11,7 +11,7 @@ function App() {
         <p className="my-6">
           Current Count is{" "}
           <span className="text-3xl font-semibold text-rose-500">
-            {state?.count}
+            {state.count}
           </span>
         </p>
         <div className="flex justify-center">

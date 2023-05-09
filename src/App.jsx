@@ -20,7 +20,10 @@ function App() {
           </button>
         </span>
         <span>
-          <button className="px-2 py-1 mx-2 bg-rose-500 text-2xl text-white">
+          <button
+            onClick={() => setState(state - 1)}
+            className="px-2 py-1 mx-2 bg-rose-500 text-2xl text-white"
+          >
             -
           </button>
         </span>

@@ -13,6 +13,9 @@ const reducer = (state = initialState, action) => {
             return { count: state.count - 1 }
         case "Add User":
             return { users: [...state.users, action.payload.user] }
+        case "Remove A User":
+            const newUsers = state.users.filter(user => user !== action.payload.user)
+            return { users: newUsers }
         default: return state
 
 

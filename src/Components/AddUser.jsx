@@ -30,6 +30,29 @@ return (
           Add User
         </button>
       </div>
+      {/* form */}
+      <div>
+        <label htmlFor="adduser">Remove A User</label>
+        <input
+          type="text"
+          id="removeuser"
+          placeholder="Remove A User"
+          className="block border-2 p-2 my-4 border-rose-500 focus:border-rose-500"
+        />
+        <button
+          onClick={() => {
+            const user = document.getElementById("removeuser").value;
+            if (!user) {
+              return alert("Enter A User First");
+            }
+            dispatch({ type: "Remove A User", payload: { user } });
+            document.getElementById("removeuser").value = "";
+          }}
+          className="my-2 bg-rose-500 text-white px-4 py-2"
+        >
+          Remove This User
+        </button>
+      </div>
 
       {/* users */}
       {state.users.length ? (

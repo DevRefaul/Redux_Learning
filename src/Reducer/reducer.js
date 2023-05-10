@@ -11,7 +11,7 @@ const reducer = (state = initialState, action) => {
             return { count: state.count + 1 }
         case "Decrement":
             return { count: state.count - 1 }
-        case "AddUser":
+        case "Add User":
             return { users: [...state.users, action.payload.user] }
         default: return state
 

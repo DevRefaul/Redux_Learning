@@ -22,7 +22,7 @@ return (
             if (!user) {
               return alert("Enter A User First");
             }
-            dispatch({ type: "AddUser", payload: { user } });
+            dispatch({ type: "Add User", payload: { user } });
             document.getElementById("adduser").value = "";
           }}
           className="my-2 bg-rose-500 text-white px-4 py-2"

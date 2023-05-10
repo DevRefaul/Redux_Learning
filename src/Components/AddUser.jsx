@@ -31,7 +31,7 @@ return (
         </button>
       </div>
       {/* form */}
-      <div>
+      <div className="mt-12">
         <label htmlFor="adduser">Remove A User</label>
         <input
           type="text"

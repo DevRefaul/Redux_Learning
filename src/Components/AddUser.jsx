@@ -32,12 +32,15 @@ return (
       </div>
 
       {/* users */}
-      {state.users.length &&
+      {state.users.length ? (
         state.users.map((user, i) => (
           <p key={i} className="text-lg font-medium text-teal-500">{`${
             i + 1
           }. ${user}`}</p>
-        ))}
+        ))
+      ) : (
+        <p>No Users Found</p>
+      )}
     </div>
   </section>
 );
